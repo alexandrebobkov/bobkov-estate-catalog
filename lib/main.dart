@@ -31,6 +31,40 @@ class MyApp extends StatelessWidget {
   }
 }
 
+class AboutPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold (
+      appBar: AppBar(title: Text("About Us")),
+      body: Center(
+        child: Text("Bobkov Estate Improvement Ltd.\n\n"
+            "M060 - 1554 Carling Ave.\n"
+            "Ottawa ON K1Z 7M4\n\n"
+            "(819) 639 - 4478\n"
+            "bobkovestateimprovement@gmx.com",
+            textAlign: TextAlign.center),
+      ),
+    );
+  }
+}
+class ProjectsPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold (
+      appBar: AppBar(title: Text("PROJECTS")),
+      body: Center(
+        child: Text("Bobkov Estate Improvement Ltd.\n\n"
+            "M060 - 1554 Carling Ave.\n"
+            "Ottawa ON K1Z 7M4\n\n"
+            "(819) 639 - 4478\n"
+            "bobkovestateimprovement@gmx.com",
+            textAlign: TextAlign.center),
+      ),
+    );
+  }
+}
+
+
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
@@ -46,6 +80,7 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
+  //_MyHomePageState createState() => _MyHomePageState();
   _MyHomePageState createState() => _MyHomePageState();
 }
 
@@ -97,9 +132,23 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ProjectsPage()),
+                  );
+                },
+                child: Text('Projects')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AboutPage()),
+                  );
+                },
+                child: Text('About Us')),
+            Text('You have pushed the button this many times:'),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
