@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:bobkovestate/project.dart';
+import 'package:bobkovestate/about.dart';
 
 void main() {
   runApp(MyApp());
@@ -30,49 +32,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-class AboutPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold (
-      appBar: AppBar(title: Text("About Us")),
-      body: Center(
-        child: Text("Bobkov Estate Improvement Ltd.\n\n"
-            "M060 - 1554 Carling Ave.\n"
-            "Ottawa ON K1Z 7M4\n\n"
-            "(819) 639 - 4478\n"
-            "bobkovestateimprovement@gmx.com",
-            textAlign: TextAlign.center),
-      ),
-    );
-  }
-}
-class ProjectsPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    /*return Container (
-      child: Row (
-        children: <Widget> [
-          Image.asset('assets/images/20200916_132932.jpg'),
-        ],
-      ),
-    );*/
-    return Scaffold (
-      appBar: AppBar(title: Text("PROJECTS")),
-      body: Center(
-        child:
-        /*Text("Bobkov Estate Improvement Ltd.\n\n"
-            "M060 - 1554 Carling Ave.\n"
-            "Ottawa ON K1Z 7M4\n\n"
-            "(819) 639 - 4478\n"
-            "bobkovestateimprovement@gmx.com",
-            textAlign: TextAlign.center),*/
-        Image.asset('assets/images/20200916_132932.jpg'),
-      ),
-    );
-  }
-}
-
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
